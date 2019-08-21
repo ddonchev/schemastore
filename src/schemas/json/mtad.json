@@ -66,7 +66,7 @@
                         "pattern": "^[A-Za-z0-9_\\-\\.]+$"
                     },
                     "type": {
-                        "description": "The module type that defines the design-time tools for the module.",
+                        "description": "Defines a pre-defined set of configurations for the module deployment. Use module type 'custom' to have no predefined configurations and use module parameters to define such",
                         "$ref": "#/definitions/module-type"
                     },
                     "description": {
@@ -85,7 +85,7 @@
                         }
                     },
                     "properties": {
-                        "description": "A collection of key-value pairs that are available to the module at runtime.",
+                        "description": "A collection of key-value pairs that are available to the module at runtime. E.g. CF app env variables.",
                         "type": "object"
                     },
                     "properties-metadata": {
@@ -154,7 +154,7 @@
                         "$ref": "#/definitions/properties-metadata"
                     },
                     "parameters": {
-                        "description": "Parameters can be used to influence the behavior of tools which interpret this descriptor. Parameters are not made available to requiring modules at runtime. Untyped resources cannot have parameters.",
+                        "description": "Parameters can be used to influence the behavior of tools which interpret this descriptor. Parameters are not made available to requiring modules at runtime.",
                         "$ref": "#/definitions/resource-parameters"
                     },
                     "parameters-metadata": {
@@ -306,7 +306,7 @@
                     "type": "boolean"
                 },
                 "dependency-type": {
-                    "description": "Defines the memory allocated to the application.",
+                    "description": "Defines behavior on resolving deployment order with cyclic dependencies ",
                     "type": "string",
                     "enum": [
                         "hard",
